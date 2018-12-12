@@ -1,0 +1,19 @@
+html,
+body {
+  background: $color-gray-light-1;
+  font-family: "Open Sans", sans-serif;
+  color: $color-gray-dark-1;
+}
+// h1,h2,h3,h4,h5,h6
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-weight: 400;
+    font-size: (7 - $i) * 10px;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  word-spacing: 2px;
+}

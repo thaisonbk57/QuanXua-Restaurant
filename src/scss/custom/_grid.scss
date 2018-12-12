@@ -1,0 +1,105 @@
+.container {
+  max-width: 975px;
+  margin: auto;
+}
+
+.row {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 8.33% * $i;
+    float: left;
+    padding: 0 10px;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+}
+
+@for $i from 0 through 5 {
+  .px-#{$i} {
+    padding: 0 10px * $i;
+  }
+}
+
+@for $i from 0 through 5 {
+  .py-#{$i} {
+    padding: 10px * $i 0;
+  }
+}
