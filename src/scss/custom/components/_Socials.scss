@@ -1,0 +1,23 @@
+.social-icons-bar {
+  // <ul>
+  display: table-cell;
+  vertical-align: middle;
+
+  .social--item {
+    // <li>
+    display: inline-block;
+    padding: 0 1.5rem;
+  }
+
+  .social--link {
+    // <a>
+    display: block;
+  }
+
+  .social--icon {
+    // <svg>
+    height: 25px;
+    width: 25px;
+    fill: $color-white;
+  }
+}

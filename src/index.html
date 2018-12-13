@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- google font -->
     <link
-      href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans:300,400,600"
+      href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans:300,400"
       rel="stylesheet"
     />
 
@@ -17,26 +17,112 @@
     <link rel="icon" href="./assets/images/logo/logo_red.png" />
 
     <!-- Title -->
-    <title>QuanXua || Vietnamesische Küche in Leipzig</title>
+    <title>Quan Xua || Vietnamesische Küche in Leipzig</title>
   </head>
   <body>
-    <div class="container">
-      <h1>GESCHICHTE</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse laborum
-        nihil aliquid necessitatibus! Eaque unde expedita impedit facilis
-        excepturi voluptatem deserunt minima, qui voluptate, voluptatibus nisi
-        obcaecati nam dolorem ullam eveniet consequuntur assumenda. Maiores
-        voluptas explicabo itaque laudantium. Error fugiat facilis
-        necessitatibus qui libero perspiciatis eveniet deleniti culpa
-        praesentium, quas, officiis maxime odio aperiam eaque fuga. Voluptas
-        blanditiis omnis quas, nesciunt qui vitae repellendus reprehenderit
-        officiis repellat temporibus expedita molestias libero aliquam
-        excepturi. Cumque ipsa autem tempora illo blanditiis deserunt obcaecati,
-        quis adipisci, labore repellat corrupti voluptatibus? Impedit, eveniet
-        voluptate. Delectus eum ea nulla molestias accusamus optio sint error
-        est!
-      </p>
-    </div>
+    <!-- NAVIGATION -->
+    <nav class="Nav">
+      <!-- SOCIAL ICONS -->
+      <ul class="social-icons-bar" id="socials">
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use
+                xlink:href="assets/SVG/sprite.svg#tripadvisor-logotype"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#yelp-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#google-plus-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#facebook-logo"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- / SOCIAL ICONS -->
+
+      <!-- MENU -->
+      <ul class="Navbar float-right">
+        <li class="Nav--item">
+          <a href="/" class="Nav--link active">Quan Xua</a>
+        </li>
+        <li class="Nav--item">
+          <a href="/ueberuns.html" class="Nav--link">Über Uns</a>
+        </li>
+        <li class="Nav--item">
+          <a href="/speisekarte.html" class="Nav--link ">Menü</a>
+        </li>
+        <li class="Nav--item">
+          <a href="/kontakt.html" class="Nav--link">Kontakt</a>
+        </li>
+        <li class="Nav--item">
+          <a href="#reservation" class="Nav--link">Reservierung</a>
+        </li>
+      </ul>
+      <!-- MENU -->
+    </nav>
+    <!-- / NAVIGATION -->
+
+    <!-- HEADER -->
+    <header class="Header container-fluid">
+      <!-- LOGO -->
+      <div class="Logo">
+        <a href="/">
+          <img
+            src="assets/images/logo/logo_red.png"
+            alt="quanxua Restaurant's logo"
+          />
+        </a>
+      </div>
+      <!-- / LOGO -->
+
+      <!-- HEADING Box -->
+      <div class="Header-box">
+        <h1 class="Heading">Traditionell mit Leidenschaft</h1>
+        <button class="btn btn-primary">
+          <a href="/speisekarte.html">Speisekarte</a>
+        </button>
+      </div>
+      <!-- / HEADING Box -->
+
+      <!-- Arrows left and right -->
+      <svg class="arrow-left arrow">
+        <use xlink:href="assets/SVG/sprite.svg#back"></use>
+      </svg>
+      <svg class="arrow-right arrow">
+        <use xlink:href="assets/SVG/sprite.svg#right-arrow"></use>
+      </svg>
+      <!-- Arrows left and right -->
+
+      <!-- Indicator -->
+
+      <div class="Indicators">
+        <span class="Indicator"></span> <span class="Indicator active"></span>
+        <span class="Indicator"></span> <span class="Indicator"></span>
+        <span class="Indicator"></span>
+      </div>
+
+      <!-- / Indicator -->
+    </header>
+    <!-- / HEADER -->
+
+    <script src="scripts/vendors/jQuery.min.js"></script>
+    <script src="scripts/custom/index.js"></script>
   </body>
 </html>

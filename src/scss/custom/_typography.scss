@@ -4,6 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: $color-gray-dark-1;
 }
+
 // h1,h2,h3,h4,h5,h6
 @for $i from 1 through 6 {
   h#{$i} {
@@ -16,4 +17,47 @@ p {
   font-size: 1.6rem;
   font-weight: 300;
   word-spacing: 2px;
+}
+
+ul {
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn {
+  padding: 1.5rem 2rem;
+  border: none;
+  transition: 0.2s;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  // font-weight: 300;
+  cursor: pointer;
+  color: $color-white;
+
+  a,
+  a:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: lighten($color-primary, $amount: 10);
+  }
+
+  &-primary {
+    background-color: $color-primary;
+  }
 }

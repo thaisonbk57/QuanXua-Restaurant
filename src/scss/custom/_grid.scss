@@ -3,15 +3,12 @@
   margin: auto;
 }
 
-.row {
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+.container-fluid {
+  width: 100%;
 }
-.text-center {
-  text-align: center;
+
+.row {
+  @include clearfix;
 }
 
 @for $i from 1 through 12 {
@@ -102,4 +99,18 @@
   .py-#{$i} {
     padding: 10px * $i 0;
   }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.float-left {
+  float: left;
+  @include clearfix;
+}
+
+.float-right {
+  float: right;
+  @include clearfix;
 }

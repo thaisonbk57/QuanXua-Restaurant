@@ -1,0 +1,49 @@
+.Header {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: $backdrop, url("../assets/images/slider/s1.jpeg");
+  background-size: cover;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  // animation: run 3s linear infinite alternate;
+
+  // @keyframes run {
+  //   0% {
+  //     background-position: 0 0;
+  //   }
+  //   100% {
+  //     background-position: 50% 50%;
+  //   }
+  // }
+
+  &-box {
+    @include center_block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .arrow {
+    height: 150px;
+    width: 50px;
+    fill: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+
+    &-left {
+      left: 1rem;
+    }
+    &-right {
+      right: 1rem;
+    }
+  }
+}

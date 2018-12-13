@@ -1,9 +1,20 @@
 @import "vendors/animate";
 
 @import "custom/abstract";
+@import "custom/mixins";
 @import "custom/grid";
 @import "custom/basic";
 @import "custom/typography";
+
+@import "custom/components/Header";
+
+// components
+@import "custom/components/Socials";
+@import "custom/components/Nav";
+@import "custom/components/Navbar";
+@import "custom/components/Logo";
+@import "custom/components/Heading";
+@import "custom/components/Indicators";
 
 // font-family: 'Open Sans', sans-serif;
 // font-family: 'Mrs Saint Delafield', cursive;
