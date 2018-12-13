@@ -33,7 +33,11 @@ gulp.task("sass", () => {
 gulp.task("scripts", () => {
   gulp
     .src("src/scripts/**/*.js")
-    .pipe(babel())
+    .pipe(
+      babel({
+        presets: ["@babel/env"]
+      })
+    )
     .pipe(uglify())
     .pipe(gulp.dest("dist/scripts/"))
 })
@@ -56,9 +60,9 @@ gulp.task("imagesMin", function() {
 
 // WATCH
 gulp.task("watch", () => {
-  gulp.watch("src/index.html", ["copyHtml"])
-  gulp.watch("src/scss/**/**/*.scss", ["sass"])
-  gulp.watch("src/scripts/**/*", ["scripts"])
+  gulp.watch("src/*.html", ["copyHtml"])
+  gulp.watch("src/scss/**/**/**/*.scss", ["sass"])
+  gulp.watch("src/scripts/**/*.js", ["scripts"])
   gulp.watch("src/images/**/*", ["imagesMin"])
 })
 
