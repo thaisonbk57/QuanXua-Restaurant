@@ -6,16 +6,6 @@
   background-size: cover;
   background-position: 50% 0;
   background-attachment: fixed;
-  // animation: run 3s linear infinite alternate;
-
-  // @keyframes run {
-  //   0% {
-  //     background-position: 0 0;
-  //   }
-  //   100% {
-  //     background-position: 50% 50%;
-  //   }
-  // }
 
   &-box {
     @include center_block;
@@ -45,5 +35,11 @@
     &-right {
       right: 1rem;
     }
+  }
+
+  .Logo {
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
   }
 }

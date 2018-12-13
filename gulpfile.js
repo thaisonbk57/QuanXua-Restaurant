@@ -6,12 +6,16 @@ var uglify = require("gulp-uglify")
 var autoprefixer = require("gulp-autoprefixer")
 var imagemin = require("gulp-imagemin")
 var pngquant = require("imagemin-pngquant")
+const htmlmin = require("gulp-htmlmin")
 
 sass.compiler = require("node-sass")
 
 // COPY HTML
 gulp.task("copyHtml", () => {
-  gulp.src("src/*.html").pipe(gulp.dest("dist/"))
+  gulp
+    .src("src/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("dist/"))
 })
 
 // COMPILE SCSS, MINIFY CSS & ADD Pre-FIXER for CSS

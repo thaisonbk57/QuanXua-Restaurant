@@ -17,6 +17,7 @@ p {
   font-size: 1.6rem;
   font-weight: 300;
   word-spacing: 2px;
+  margin-bottom: 2rem;
 }
 
 ul {
@@ -60,4 +61,22 @@ img {
   &-primary {
     background-color: $color-primary;
   }
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.text-white {
+  color: white;
+}
+.text-secondary {
+  color: $color-secondary;
+}
+.text-dark {
+  color: $color-gray-dark-1;
+}
+
+.text-green {
+  color: $color-green;
 }

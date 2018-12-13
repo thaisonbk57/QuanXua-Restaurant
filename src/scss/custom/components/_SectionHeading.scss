@@ -1,0 +1,21 @@
+.SectionHeading {
+  // div
+  text-align: center;
+  color: $color-gray-dark-1;
+  margin-bottom: 3rem;
+
+  .Heading--primary {
+    // h2
+    font-family: "Mrs Saint Delafield", cursive;
+    font-size: 7rem;
+    color: $color-primary;
+    margin-bottom: -3rem;
+  }
+
+  .Heading--secondary {
+    // h2
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

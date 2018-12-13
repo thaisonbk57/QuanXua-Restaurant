@@ -101,6 +101,18 @@
   }
 }
 
+@for $i from 0 through 5 {
+  .mx-#{$i} {
+    margin: 0 10px * $i;
+  }
+}
+
+@for $i from 0 through 5 {
+  .my-#{$i} {
+    margin: 10px * $i 0;
+  }
+}
+
 .text-center {
   text-align: center;
 }

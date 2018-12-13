@@ -1,0 +1,42 @@
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border: 1px solid $color-primary;
+  padding-right: 3.5rem;
+  appearance: textfield;
+  cursor: text;
+  text-rendering: auto;
+  resize: none;
+  border-radius: 0px;
+
+  option {
+    text-align: center;
+  }
+
+  &:after,
+  &:before {
+    display: none;
+  }
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: 1px solid $color-green;
+  }
+}
+
+.form-icon {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  fill: $color-primary;
+}
