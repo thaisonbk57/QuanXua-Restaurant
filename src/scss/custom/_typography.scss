@@ -35,10 +35,10 @@ img {
 }
 
 .btn {
-  padding: 1.5rem 2rem;
+  padding: 1.4rem 2rem;
   border: none;
   transition: 0.2s;
-  font-size: 2rem;
+  font-size: 1.7rem;
   letter-spacing: 2px;
   // font-weight: 300;
   cursor: pointer;
@@ -92,6 +92,10 @@ img {
 
 .text-justify {
   text-align: justify;
+}
+
+.text-sm {
+  font-size: 1.3rem;
 }
 
 .float-left {
