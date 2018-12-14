@@ -1,0 +1,30 @@
+.Header_half {
+  width: 100vw;
+  height: 438px;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 0;
+  background-attachment: fixed;
+
+  @include for-tablet-vertical {
+    background-attachment: initial;
+  }
+
+  .SectionHeading {
+    color: $color-white;
+
+    @include center_block;
+
+    .Heading--primary {
+      color: $color-white;
+    }
+
+    .Heading--secondary {
+    }
+  }
+}
+
+.Header_about {
+  // for about page
+  background-image: $backdrop, url("../assets/images/slider/s1.jpeg");
+}

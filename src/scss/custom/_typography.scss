@@ -85,3 +85,27 @@ img {
 .text-green {
   color: $color-green;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.float-left {
+  float: left;
+  @include clearfix;
+}
+
+.float-right {
+  float: right;
+  @include clearfix;
+}
+
+.desktop-only {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

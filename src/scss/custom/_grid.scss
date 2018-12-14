@@ -11,6 +11,10 @@
   @include clearfix;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 // .col
 @for $i from 1 through 12 {
   .col-#{$i} {
@@ -28,25 +32,29 @@
 
 @for $i from 0 through 5 {
   .px-#{$i} {
-    padding: 0 10px * $i;
+    padding-left: 10px * $i;
+    padding-right: 10px * $i;
   }
 }
 
 @for $i from 0 through 5 {
   .py-#{$i} {
-    padding: 10px * $i 0;
+    padding-top: 10px * $i;
+    padding-bottom: 10px * $i;
   }
 }
 
 @for $i from 0 through 5 {
   .mx-#{$i} {
-    margin: 0 10px * $i;
+    margin-left: 10px * $i;
+    margin-right: 10px * $i;
   }
 }
 
 @for $i from 0 through 5 {
   .my-#{$i} {
-    margin: 10px * $i 0;
+    margin-top: 10px * $i;
+    margin-right: 10px * $i;
   }
 }
 
@@ -67,13 +75,15 @@
 
   @for $i from 0 through 5 {
     .px-lg-#{$i} {
-      padding: 0 10px * $i;
+      padding-left: 10px * $i;
+      padding-right: 10px * $i;
     }
   }
 
   @for $i from 0 through 5 {
     .py-lg-#{$i} {
-      padding: 10px * $i 0;
+      padding-top: 10px * $i;
+      padding-bottom: 10px * $i;
     }
   }
 }
@@ -95,13 +105,15 @@
 
   @for $i from 0 through 5 {
     .px-md-#{$i} {
-      padding: 0 10px * $i;
+      padding-left: 10px * $i;
+      padding-right: 10px * $i;
     }
   }
 
   @for $i from 0 through 5 {
     .py-md-#{$i} {
-      padding: 10px * $i 0;
+      padding-top: 10px * $i;
+      padding-bottom: 10px * $i;
     }
   }
 }
@@ -123,12 +135,14 @@
 
   @for $i from 0 through 5 {
     .px-sm-#{$i} {
-      padding: 0 10px * $i;
+      padding-left: 10px * $i;
+      padding-right: 10px * $i;
     }
   }
   @for $i from 0 through 5 {
     .py-sm-#{$i} {
-      padding: 10px * $i 0;
+      padding-top: 10px * $i;
+      padding-bottom: 10px * $i;
     }
   }
 }
@@ -150,27 +164,15 @@
 
   @for $i from 0 through 5 {
     .px-xs-#{$i} {
-      padding: 0 10px * $i;
+      padding-left: 10px * $i;
+      padding-right: 10px * $i;
     }
   }
 
   @for $i from 0 through 5 {
     .py-xs-#{$i} {
-      padding: 10px * $i 0;
+      padding-top: 10px * $i;
+      padding-bottom: 10px * $i;
     }
   }
-}
-
-.text-center {
-  text-align: center;
-}
-
-.float-left {
-  float: left;
-  @include clearfix;
-}
-
-.float-right {
-  float: right;
-  @include clearfix;
 }
