@@ -14,3 +14,30 @@
     transform: translate(-50%, -50%);
   }
 }
+
+// RESPONSIVE
+@mixin for-big-desktop {
+  @media screen and (min-width: 1800px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-tablet-vertical {
+  @media screen and (max-width: 900px) {
+    @content;
+  }
+}
+@mixin for-phone-landscape {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+@mixin for-phone-vertical {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}

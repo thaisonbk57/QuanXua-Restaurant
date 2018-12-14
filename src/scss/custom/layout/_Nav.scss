@@ -1,14 +1,21 @@
 .Nav {
+  // nav
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
   top: 0;
   left: 0;
   width: 100%;
-  // box-shadow: 0 1px 5px $color-black;
-  // display: flex;
-  // justify-content: space-between;
   display: table;
   align-items: center;
   padding: 0.5rem 0.5rem;
   z-index: 100;
+  overflow: hidden;
+
+  @include for-tablet-vertical {
+    height: 100vh;
+    display: block;
+    width: 300px;
+    text-align: center;
+    transform: translateX(-110%);
+  }
 }

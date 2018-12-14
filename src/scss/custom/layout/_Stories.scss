@@ -5,6 +5,10 @@
     // div.row
     display: flex;
     align-items: center;
+
+    @include for-phone-landscape {
+      display: block;
+    }
   }
 
   .Story-1 {
@@ -13,5 +17,9 @@
 
   .Story-2 {
     // div.row
+    @include for-phone-landscape {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 }

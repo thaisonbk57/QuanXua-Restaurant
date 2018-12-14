@@ -1,5 +1,9 @@
 .Navbar {
   // <ul>
+  @include for-tablet-vertical {
+    text-align: center;
+    float: none;
+  }
 
   .Nav--item {
     // <li>
@@ -8,6 +12,11 @@
 
     &:last-child .Nav--link {
       background: $color-primary;
+    }
+
+    @include for-tablet-vertical {
+      display: block;
+      margin-left: 0;
     }
   }
 
@@ -23,6 +32,9 @@
     &:hover,
     &.active {
       color: $color-secondary;
+    }
+
+    @include for-tablet-vertical {
     }
   }
 }

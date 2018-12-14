@@ -2,4 +2,9 @@
   // div > a > img
   width: 175px;
   height: 175px;
+
+  @include for-tablet-vertical {
+    width: 100px;
+    height: 100px;
+  }
 }

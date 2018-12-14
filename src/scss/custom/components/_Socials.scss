@@ -3,6 +3,12 @@
   display: table-cell;
   vertical-align: middle;
 
+  @include for-tablet-vertical {
+    display: block;
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+  }
+
   .social--item {
     // <li>
     display: inline-block;

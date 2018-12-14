@@ -41,5 +41,14 @@
     position: absolute;
     top: 10rem;
     left: 5rem;
+
+    @include for-tablet-vertical {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include for-phone-vertical {
+      top: 5rem;
+    }
   }
 }

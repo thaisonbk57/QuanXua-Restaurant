@@ -11,6 +11,7 @@
   @include clearfix;
 }
 
+// .col
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: 8.33% * $i;
@@ -21,70 +22,6 @@
       content: "";
       display: block;
       clear: both;
-    }
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-      width: 8.33% * $i;
-      float: left;
-      padding: 0 10px;
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 900px) {
-  @for $i from 1 through 12 {
-    .col-md-#{$i} {
-      width: 8.33% * $i;
-      float: left;
-      padding: 0 10px;
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  @for $i from 1 through 12 {
-    .col-sm-#{$i} {
-      width: 8.33% * $i;
-      float: left;
-      padding: 0 10px;
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 400px) {
-  @for $i from 1 through 12 {
-    .col-xs-#{$i} {
-      width: 8.33% * $i;
-      float: left;
-      padding: 0 10px;
-
-      &:after {
-        content: "";
-        display: block;
-        clear: both;
-      }
     }
   }
 }
@@ -110,6 +47,117 @@
 @for $i from 0 through 5 {
   .my-#{$i} {
     margin: 10px * $i 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .px-lg-#{$i} {
+      padding: 0 10px * $i;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .py-lg-#{$i} {
+      padding: 10px * $i 0;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .px-md-#{$i} {
+      padding: 0 10px * $i;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .py-md-#{$i} {
+      padding: 10px * $i 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .px-sm-#{$i} {
+      padding: 0 10px * $i;
+    }
+  }
+  @for $i from 0 through 5 {
+    .py-sm-#{$i} {
+      padding: 10px * $i 0;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      width: 8.33% * $i;
+      float: left;
+      padding: 0 10px;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .px-xs-#{$i} {
+      padding: 0 10px * $i;
+    }
+  }
+
+  @for $i from 0 through 5 {
+    .py-xs-#{$i} {
+      padding: 10px * $i 0;
+    }
   }
 }
 

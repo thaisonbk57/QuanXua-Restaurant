@@ -15,5 +15,9 @@
     &.active {
       background: $color-gray-light-1;
     }
+
+    @include for-tablet-vertical {
+      margin: 0.5rem;
+    }
   }
 }
