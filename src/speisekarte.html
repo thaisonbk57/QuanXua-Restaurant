@@ -4,9 +4,184 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield|Open+Sans:400"
+      rel="stylesheet"
+    />
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!-- Icon FAVICON -->
+    <link rel="icon" href="./assets/images/logo/logo_red.png" />
     <title>Quan Xua || Speisekarte</title>
   </head>
   <body>
-    <h1>Speisekarte</h1>
+    <!-- <NAVIGATION /> -->
+    <nav id="Nav" class="Nav">
+      <!-- SOCIAL ICONS -->
+      <ul class="social-icons-bar" id="socials">
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use
+                xlink:href="assets/SVG/sprite.svg#tripadvisor-logotype"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#yelp-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#google-plus-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#facebook-logo"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- / SOCIAL ICONS -->
+
+      <!-- MENU -->
+      <ul class="Navbar float-right">
+        <li class="Nav--item">
+          <a href="/index.html" class="Nav--link">Quan Xua</a>
+        </li>
+        <li class="Nav--item">
+          <a href="/ueberuns.html" class="Nav--link">Über Uns</a>
+        </li>
+        <li class="Nav--item"><a href="#" class="Nav--link active">Menü</a></li>
+        <li class="Nav--item">
+          <a href="/kontakt.html" class="Nav--link">Kontakt</a>
+        </li>
+        <li class="Nav--item">
+          <a href="/index.html#reservation" class="Nav--link">Reservierung</a>
+        </li>
+      </ul>
+      <!-- MENU -->
+    </nav>
+
+    <!-- <NAV TOGGLE /> -->
+    <div class="NavToggle">
+      <input id="nav-toggle" class="" type="checkbox" readonly />
+      <label id="NavToggle" for="nav-toggle">
+        <span class="stick-1"></span> <span class="stick-2"></span>
+        <span class="stick-3"></span>
+      </label>
+    </div>
+
+    <!-- ----------------------------------------- -->
+    <!-- ------------- HEADER --------------- -->
+    <!-- ----------------------------------------- -->
+
+    <header class="Header_half Header_menu container-fluid">
+      <!-- <SECTION-HEADING /> -->
+      <div class="SectionHeading">
+        <h2 class="Heading--primary">Entdecke</h2>
+        <h2 class="Heading--secondary">Speisekarte</h2>
+      </div>
+    </header>
+
+    <!-- ----------------------------------------- -->
+    <!-- ------------- MAIN ------------------- -->
+    <!-- ----------------------------------------- -->
+
+    <!-- <MAIN /> -->
+    <main class="Main">
+      <section class="section container">
+        <div class="Divider">* * *</div>
+        <h1>Speisekarte</h1>
+      </section>
+    </main>
+
+    <!-- ----------------------------------------- -->
+    <!-- -------------  FOOTER  ------------------ -->
+    <!-- ----------------------------------------- -->
+
+    <!-- <FOOTER/> -->
+    <footer class="Footer container-fluid py-3">
+      <!-- LOGO -->
+      <div class="Logo">
+        <a href="/">
+          <img
+            src="assets/images/logo/logo_white.png"
+            alt="quanxua Restaurant's logo"
+          />
+        </a>
+      </div>
+
+      <!-- INFO and ADDRESS -->
+      <div class="py-3">
+        <p>
+          <span class="text-secondary">Addresse: </span>Kurt-Günther-Straße 3,
+          04317 Leipzig
+        </p>
+        <p>
+          <span class="text-secondary">Email: </span
+          ><a href="mailto:hallo@quanxua.de">hallo@quanxua.de</a>
+        </p>
+        <p>
+          <span class="text-secondary">Tel: </span
+          ><a href="tel:030442194">(030) 442 1942</a>
+        </p>
+      </div>
+
+      <!-- SOCIAL ICONS -->
+      <ul class="social-icons-bar" id="socials">
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use
+                xlink:href="assets/SVG/sprite.svg#tripadvisor-logotype"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#yelp-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#google-plus-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social--item">
+          <a class="social--link" href="/" target="_blank">
+            <svg class="icon social--icon">
+              <use xlink:href="assets/SVG/sprite.svg#facebook-logo"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- IMPRESSUM & DATENSCHUTZ -->
+
+      <div class="text-center impressum">
+        <span><a class="text-secondary" href="/">Quan Xua</a></span> |
+        <span><a href="/impressum.html">Impressum</a></span> |
+        <span><a href="/impressum.html">Datenschutz</a></span>
+      </div>
+    </footer>
+
+    <script src="scripts/custom/index.js"></script>
   </body>
 </html>

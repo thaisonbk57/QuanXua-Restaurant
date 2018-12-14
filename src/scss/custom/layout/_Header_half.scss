@@ -3,7 +3,7 @@
   height: 438px;
   position: relative;
   background-size: cover;
-  background-position: 50% 0;
+  background-position: center;
   background-attachment: fixed;
 
   @include for-tablet-vertical {
@@ -27,4 +27,12 @@
 .Header_about {
   // for about page
   background-image: $backdrop, url("../assets/images/slider/s1.jpeg");
+}
+
+.Header_contact {
+  background-image: $backdrop, url("../assets/images/slider/s1.jpeg");
+}
+
+.Header_menu {
+  background-image: $backdrop, url("../assets/images/slider/s2.jpeg");
 }
