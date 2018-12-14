@@ -20,4 +20,8 @@
       margin: 0.5rem;
     }
   }
+
+  @include for-phone-landscape {
+    display: none;
+  }
 }

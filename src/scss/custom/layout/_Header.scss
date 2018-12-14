@@ -35,6 +35,10 @@
     &-right {
       right: 1rem;
     }
+
+    @include for-phone-landscape {
+      display: none;
+    }
   }
 
   .Logo {
