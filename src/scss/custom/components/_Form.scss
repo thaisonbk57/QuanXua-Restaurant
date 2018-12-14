@@ -1,9 +1,11 @@
 .form-group {
+  // div
   margin-bottom: 2rem;
   position: relative;
 }
 
 .form-control {
+  // input, textarea, select,...
   display: block;
   width: 100%;
   padding: 1rem;
@@ -15,6 +17,7 @@
   text-rendering: auto;
   resize: none;
   border-radius: 0px;
+  background: $color-white;
 
   option {
     text-align: center;
