@@ -1,0 +1,36 @@
+.call-us-btn {
+  border: none;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  box-shadow: 0 3px 10px black;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  overflow: hidden;
+  z-index: 9999;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .contact-icon {
+    height: 40px;
+    width: 40px;
+
+    animation: vibrate 0.5s ease-in-out infinite alternate;
+
+    @keyframes vibrate {
+      0% {
+        transform: rotateZ(-5deg) scale(1);
+      }
+      100% {
+        transform: rotateZ(5deg) scale(1.1);
+      }
+    }
+  }
+}

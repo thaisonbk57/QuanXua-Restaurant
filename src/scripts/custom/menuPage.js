@@ -479,6 +479,11 @@ function displayMenu() {
   });
 }
 
+// @params: course : String: enum: vorspeisen, hauptgerichter, dessert
+// @params: name : String
+// @params: price: Number
+// @params: ingredient : String
+// function receive these input and return a template string which display main ingredient and name and price of a dish.
 function displayDish(course, name, price, ingredient) {
   return `
   <div class="dish ${course}">
@@ -494,6 +499,9 @@ function displayDish(course, name, price, ingredient) {
   `;
 }
 
+// @params: option : String (mit Garnelen, mit Ente, ...)
+// @params : price : Number
+// function display optional choices with corresponding prices of a dish (if available)
 function displayOption(option, price) {
   return `
 <div class="text-dark dish--option">
@@ -509,8 +517,8 @@ function displayOption(option, price) {
   // </div>
 }
 
-// Switch between menu Tabs
-// to display dishes of one type: add class 'show' to that dish
+// @params : null
+// function add click event to menu-tabs (VORSPEISEN, HAUPTSPEISEN, DESSERT), so that when users click on a menu tab, the corresponding menu will be shown (by adding class 'show' to dishes)
 function switchMenuTab() {
   const vorspeisen = Array.from(document.getElementsByClassName("vorspeisen"));
   const dishes = Array.from(document.getElementsByClassName("dish"));
