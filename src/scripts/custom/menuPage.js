@@ -534,6 +534,7 @@ function switchMenuTab() {
 
       if (e.target.classList[0] !== "menuTab") {
         e.target.parentElement.classList.add("active");
+        e.target.parentElement.parentElement.classList.add("active");
       }
       e.target.classList.add("active");
 
@@ -544,7 +545,9 @@ function switchMenuTab() {
 
       // IV - add class 'show' to desired dishes
       const desiredDishes =
-        e.target.parentElement.dataset.tabtype || e.target.dataset.tabtype; //vorspeisen, hauptgerichter, dessert
+        e.target.parentElement.parentElement.dataset.tabtype ||
+        e.target.parentElement.dataset.tabtype ||
+        e.target.dataset.tabtype; //vorspeisen, hauptgerichter, dessert
 
       Array.from(document.getElementsByClassName(desiredDishes)).forEach(
         dish => {
