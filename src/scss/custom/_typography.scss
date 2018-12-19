@@ -31,7 +31,7 @@ ul {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 .btn {
@@ -90,6 +90,12 @@ img {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
 .text-justify {
   text-align: justify;
 }

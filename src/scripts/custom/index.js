@@ -1,11 +1,16 @@
 const state = {
   showSideDrawer: false
 }
+const screenHeight = window.screen.availHeight
+const screenWidth = window.screen.availWidth
 
-window.onload = e => {
-  const screenHeight = window.screen.availHeight
-  const screenWidth = window.screen.availWidth
+$(function() {
+  if (screenWidth <= 900) {
+    toggleNavBar()
+  }
+})
 
+function toggleNavBar() {
   const toggleSideDrawer = () => {
     !state.showSideDrawer
       ? (document.querySelector("#Nav").style.transform = "translateX(0)")
@@ -16,10 +21,7 @@ window.onload = e => {
     // toggle showSideDrawer property
     state.showSideDrawer = !state.showSideDrawer
   }
-
-  if (screenWidth <= 900) {
-    document.querySelector("#NavToggle").addEventListener("click", e => {
-      toggleSideDrawer()
-    })
-  }
+  document.querySelector("#NavToggle").addEventListener("click", e => {
+    toggleSideDrawer()
+  })
 }

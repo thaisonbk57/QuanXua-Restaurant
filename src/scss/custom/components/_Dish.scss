@@ -1,0 +1,62 @@
+.dish {
+  padding-right: 5rem;
+  flex: 50% 0;
+  margin-bottom: 5rem;
+
+  // hide all by default
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  @include for-tablet-vertical {
+    flex: 100% 0;
+    padding: 0;
+  }
+
+  &--heading {
+    margin-bottom: 1.1rem;
+  }
+
+  &--name {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+  }
+
+  &--option {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    .dotted {
+      flex: 1 0;
+      border-top: 1px dotted $color-gray-dark-1;
+      align-self: flex-end;
+      height: 1px;
+      margin: auto 8px;
+    }
+
+    .dish--price {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--ingredients {
+  }
+
+  &--heading {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &--price {
+    font-size: 2.2rem;
+    margin: 0;
+  }
+}

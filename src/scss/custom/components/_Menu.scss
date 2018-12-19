@@ -1,0 +1,49 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menuTabs {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menuTab {
+  color: $color-gray-light-2;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  letter-spacing: 1px;
+
+  &.active,
+  &.active .menu-icon {
+    color: $color-primary;
+    fill: $color-primary;
+  }
+
+  .menu-icon {
+    fill: $color-white;
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .tabName {
+    display: block;
+    margin-left: 1rem;
+
+    @include for-phone-landscape {
+      display: none;
+    }
+  }
+}

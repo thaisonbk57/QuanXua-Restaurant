@@ -93,6 +93,29 @@
         <h2 class="Heading--primary">Entdecke</h2>
         <h2 class="Heading--secondary">Speisekarte</h2>
       </div>
+
+      <div class="menuTabs container">
+        <div data-tabType="vorspeisen" class="menuTab active">
+          <svg class="icon menu-icon">
+            <use xlink:href="./assets/SVG/sprite.svg#salad"></use>
+          </svg>
+          <span class="tabName desktop-only"> VORSPEISEN </span>
+        </div>
+        <div data-tabType="hauptgerichter" class="menuTab">
+          <svg class="icon menu-icon">
+            <use
+              xlink:href="./assets/SVG/sprite.svg#bell-covering-hot-dish"
+            ></use>
+          </svg>
+          <span class="tabName desktop-only"> HAUPTSPEISEN </span>
+        </div>
+        <div data-tabType="dessert" class="menuTab">
+          <svg class="icon menu-icon">
+            <use xlink:href="./assets/SVG/sprite.svg#cake"></use>
+          </svg>
+          <span class="tabName desktop-only"> DESSERT </span>
+        </div>
+      </div>
     </header>
 
     <!-- ----------------------------------------- -->
@@ -103,7 +126,32 @@
     <main class="Main">
       <section class="section container">
         <div class="Divider">* * *</div>
-        <h1>Speisekarte</h1>
+        <div class="menu px-1" id="menu">
+          <!--
+            <div class="dish py-4">
+              <div class="dish--heading">
+                <h4 class="text-primary dish--name">NEM CUON</h4>
+                <p class="price text-primary text-right">4.5$</p>
+              </div>
+
+              <p class="text-dark dish--ingredients">
+                zwei vietnamesische sommerrollen gefüllt mit reisnudeln,
+                thai-basilikum und koriander, salat, erdnüssen in reispapier
+                gewickelt. dazu hausgemachter dip (nuoc mam dip)
+              </p>
+
+              <div class="text-dark dish--option">
+                <p class="text-dark ">mit Garnelen</p>
+                <p class="price text-primary text-right">4.5$</p>
+              </div>
+
+              <div class="text-dark dish--option">
+                <p class="text-dark ">mit Garnelen</p>
+                <p class="price text-primary text-right">4.5$</p>
+              </div>
+            </div>
+          -->
+        </div>
       </section>
     </main>
 
@@ -182,6 +230,12 @@
       </div>
     </footer>
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/custom/index.js"></script>
+    <script src="scripts/custom/menuPage.js"></script>
   </body>
 </html>
