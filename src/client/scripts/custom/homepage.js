@@ -61,8 +61,6 @@ function prevSlide() {
 }
 
 // function send email for reservation system
-// $(selector).post(URL,data,function(data,status,xhr),dataType)
-
 function reservation() {
   $(DOMStrings.reservationForm).on("submit", e => {
     e.preventDefault();

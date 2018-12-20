@@ -36,6 +36,7 @@ app.route("/").get((req, res) => {
   res.send("test");
 });
 
+// API routes for reservation
 app.post("/api/reservation", (req, res) => {
   //@TODO: data sent from client need to be validated.
   const { date, time, people, name, phone, note } = req.body;
@@ -67,6 +68,39 @@ app.post("/api/reservation", (req, res) => {
       res.send({
         status: "OK",
         message: "Ihre Reservierung war erfolreich. Danke schön!"
+      });
+    }
+  });
+});
+
+// API routes for contact
+app.post("/api/contact", (req, res) => {
+  //@TODO: data sent from client need to be validated.
+  const { name, email, subject, message, phone } = req.body;
+
+  const option = {
+    from: `KONTAKT QUANXUA <${email}`,
+    to: process.env.TO_EMAIL,
+    subject: subject,
+    html: `
+        <p style='font-size: 18px'><b>Name:</b> ${name}</p>
+        <p style='font-size: 18px'><b>Email:</b> ${email}</p>
+        <p style='font-size: 18px'><b>Tel:</b> <a href='tel:${phone ||
+          ""}'>${phone || ""}</a></p>
+        <p style='font-size: 18px'>${message}</p>
+        `
+  };
+
+  transporter.sendMail(option, (err, info) => {
+    if (err) {
+      res.send({
+        status: "ERROR",
+        message: "Fehlgeschlagen. Versuchen Sie später nochmal!"
+      });
+    } else {
+      res.send({
+        status: "OK",
+        message: "Danke für Ihre Nachricht!"
       });
     }
   });
