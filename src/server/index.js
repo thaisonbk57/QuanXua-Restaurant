@@ -8,7 +8,6 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-console.log(process.env.FROM_EMAIL, process.env.PASS);
 app.use(express.json());
 app.use(cors());
 app.use(helmet());
@@ -33,21 +32,22 @@ app.route("/").get((req, res) => {
 });
 
 app.post("/api/reservation", (req, res) => {
-  const { name, email, seat, time, date, note, phone } = req.body;
-  console.log(req.body);
+  //@TODO: data sent from client need to be validated.
+  const { date, time, people, name, phone, note } = req.body;
 
   const option = {
-    from: `RESERVATION ${name} <${email}`,
+    from: `RESERVIERUNG QUANXUA <${process.env.FROM_EMAIL}`,
     to: process.env.TO_EMAIL,
-    subject: name,
+    subject: "RESERVIERUNG",
     html: `
-        <p><b>Name: ${name || "unknown"}</b></p>  
-        <p><b>Date: ${date || "unknown"}</b></p>
-        <p><b>Time: ${time || "unknown"}</b></p>
-        <p><b>Seats: ${seat || "unknown"}</b></p>
-        <p><b>Phone: ${phone || "unknown"}</b></p>
-        <p><b>Email: ${email || "unknown"}</b></p>
-        <p><b>Note: ${note || "empty"}</b></p>
+        <p style='font-size: 20px'><b>Name:</b> ${name || "unknown"}</p>  
+        <p style='font-size: 20px'><b>Datum:</b> ${date || "unknown"}</p>
+        <p style='font-size: 20px'><b>Uhrzeit:</b> ${time || "unknown"}</p>
+        <p style='font-size: 20px'><b>Personen:</b> ${people || "unknown"}</p>
+        <p style='font-size: 20px'><b>Tel:</b> <a href='tel:${phone ||
+          "unknown"}'>${phone || "unknown"}</a></p>
+        <p style='font-size: 19px'><b style='font-size: 20px'>Besondere Wünsche:</b> ${note ||
+          "empty"}</p>
         `
   };
 
@@ -55,13 +55,13 @@ app.post("/api/reservation", (req, res) => {
     if (err) {
       res.send({
         status: "ERROR",
-        message: "Something went wrong. Your reservation failed.",
+        message: "Fehlgeschlagen. Versuchen Sie später nochmal!",
         err
       });
     } else {
       res.send({
         status: "OK",
-        message: "Thank you for your reservation!"
+        message: "Ihre Reservierung war erfolreich. Danke schön!"
       });
     }
   });
