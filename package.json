@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -r dist && gulp build"
+    "build": "rm -r dist && gulp build",
+    "start": "node server/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,12 @@
     "gulp-uglify": "^3.0.1",
     "imagemin-pngquant": "^6.0.0",
     "node-sass": "^4.10.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "nodemailer": "^4.7.0"
   }
 }

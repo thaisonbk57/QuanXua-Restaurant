@@ -6,3 +6,6 @@
 firebase.json
 
 .firebase
+
+
+.env
