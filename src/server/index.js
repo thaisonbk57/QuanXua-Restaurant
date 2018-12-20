@@ -29,7 +29,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.route("/").get((req, res) => {
-  res.render("index");
+  res.send("test");
 });
 
 app.post("/api/reservation", (req, res) => {
