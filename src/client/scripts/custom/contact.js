@@ -37,7 +37,7 @@ function contact() {
 
     // send post request to server
     $.post(
-      "http://localhost:3000/api/contact",
+      "https://quanxua.herokuapp.com/api/contact",
       contactInfo,
       (data, status, xhr) => {
         if (status === "success") {
