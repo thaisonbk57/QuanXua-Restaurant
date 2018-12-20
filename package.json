@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "rm -r dist && gulp build",
+    "build": "rm -r dist && rm -r server && gulp build",
     "start": "node server/index.js",
     "server": "nodemon server/index.js"
   },
@@ -30,6 +30,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
+    "morgan": "^1.9.1",
     "nodemailer": "^4.7.0"
   }
 }

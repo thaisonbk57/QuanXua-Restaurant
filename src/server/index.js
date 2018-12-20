@@ -5,6 +5,7 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 const helmet = require("helmet");
 const path = require("path");
+const morgan = require("morgan");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,10 @@ app.use(cors());
 app.use(helmet());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.resolve(__dirname, "../dist")));
+
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan());
+}
 
 const transporter = nodemailer.createTransport({
   service: "gmail",

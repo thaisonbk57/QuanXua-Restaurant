@@ -107,6 +107,7 @@ function reservation() {
 
           // display the message from server inform user that reservation is successful.
           if (data.status === "OK") {
+            console.log(data.message);
             $(DOMStrings.serverMsg)
               .css("color", "green")
               .text(data.message);
