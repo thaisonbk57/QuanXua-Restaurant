@@ -1,0 +1,8 @@
+.lazy {
+  opacity: 0;
+  transition: 1.5s;
+}
+
+.lazy.show {
+  opacity: 1;
+}
