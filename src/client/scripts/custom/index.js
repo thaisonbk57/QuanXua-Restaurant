@@ -8,6 +8,8 @@ $(function() {
   if (screenWidth <= 900) {
     toggleNavBar();
   }
+
+  lazyImage();
 });
 
 function toggleNavBar() {
@@ -47,5 +49,3 @@ function lazyImage() {
     });
   });
 }
-
-lazyImage();
