@@ -15,21 +15,45 @@ let submitting = false;
 let i = 1;
 const header = document.querySelector(DOMStrings.header);
 const indicators = Array.from(document.querySelectorAll(DOMStrings.indicator));
+const fades = Array.prototype.slice.call(
+  document.getElementsByClassName("fade")
+);
+
+let slide; //setInterval function to auto-change background
 
 $(function() {
   slideShow();
+
+  if (screenWidth > 900) {
+    // auto change background after 3 sec
+    slide = window.setInterval(() => {
+      nextSlide();
+      changeBackground();
+    }, 3000);
+  }
+
   reservation();
 });
 
 function slideShow() {
   $(DOMStrings.arrowLeft).on("click", () => {
+    clearInterval(slide);
     prevSlide();
     changeBackground();
+    slide = window.setInterval(() => {
+      nextSlide();
+      changeBackground();
+    }, 3000);
   });
 
   $(DOMStrings.arrowRight).on("click", () => {
+    clearInterval(slide);
     nextSlide();
     changeBackground();
+    slide = window.setInterval(() => {
+      nextSlide();
+      changeBackground();
+    }, 3000);
   });
 }
 // function changes the background of Header section after a period of time (3s)
@@ -41,9 +65,13 @@ function changeBackground() {
   indicators.forEach(indicator => {
     indicator.classList.remove("active");
   });
+  fades.forEach(fade => {
+    fade.classList.remove("active");
+  });
 
   // add class 'activ' to current Indicator
   document.querySelector(`.Indicator-${i}`).classList.add("active");
+  document.querySelector(`.fade-${i}`).classList.add("active");
 }
 function nextSlide() {
   if (i >= 5) {

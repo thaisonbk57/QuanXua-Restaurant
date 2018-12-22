@@ -7,6 +7,32 @@
   background-position: 50% 0;
   background-attachment: fixed;
 
+  .fade {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: 1;
+    opacity: 0.5;
+    animation: fade 0.5s ease-in forwards;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      0% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+
   @include for-tablet-vertical {
     background-attachment: initial;
   }
@@ -15,6 +41,7 @@
     @include center_block;
     width: 100%;
     text-align: center;
+    z-index: 2;
   }
 
   .arrow {
@@ -27,6 +54,7 @@
     transition: 0.3s;
     cursor: pointer;
     opacity: 0.5;
+    z-index: 2;
 
     &:hover {
       background: rgba(0, 0, 0, 0.5);
@@ -49,6 +77,7 @@
     position: absolute;
     top: 10rem;
     left: 5rem;
+    z-index: 3;
 
     @include for-tablet-vertical {
       left: 50%;
