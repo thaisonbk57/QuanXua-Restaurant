@@ -1,12 +1,11 @@
-/dist/
-/node_modules/
+node_modules
 
-.firebaserc
-
-firebase.json
+dist
 
 .firebase
 
 .env
 
-.src
+.firebaserc
+
+firebase.json
