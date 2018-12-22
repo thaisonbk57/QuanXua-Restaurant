@@ -29,7 +29,7 @@ $(function() {
     slide = window.setInterval(() => {
       nextSlide();
       changeBackground();
-    }, 3000);
+    }, 4000);
   }
 
   reservation();
@@ -41,9 +41,9 @@ function slideShow() {
     prevSlide();
     changeBackground();
     slide = window.setInterval(() => {
-      nextSlide();
+      prevSlide();
       changeBackground();
-    }, 3000);
+    }, 4000);
   });
 
   $(DOMStrings.arrowRight).on("click", () => {
@@ -53,7 +53,7 @@ function slideShow() {
     slide = window.setInterval(() => {
       nextSlide();
       changeBackground();
-    }, 3000);
+    }, 4000);
   });
 }
 // function changes the background of Header section after a period of time (3s)
