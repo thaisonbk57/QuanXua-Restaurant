@@ -9,6 +9,7 @@
   right: 1rem;
   overflow: hidden;
   z-index: 9999;
+  background: $color-white !important;
 
   @media screen and (min-width: 768px) {
     display: none;
