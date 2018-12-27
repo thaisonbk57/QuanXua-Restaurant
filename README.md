@@ -14,4 +14,4 @@ by [Thaison Dang](https://github.com/thaisonbk57)
 
 Try the [DEMO](https://restaurant-vietbowl.firebaseapp.com/)
 
-![screenshot](./screenshot.jpg)
+![screenshot](./screenshot.png)
