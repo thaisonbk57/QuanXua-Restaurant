@@ -12,6 +12,6 @@ by [Thaison Dang](https://github.com/thaisonbk57)
 - facebook share feature.
 - lazyload image to speed up the page.
 
-Try the [DEMO](https://restaurant-vietbowl.firebaseapp.com/)
+[LIVE](https://quanxua.de/)
 
 ![screenshot](./screenshot.png)
